@@ -64,11 +64,17 @@ body {
 
 /* Blog content styles */
 .blog-content h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .blog-content h1 {
+    font-size: 2rem;
+  }
 }
 
 .blog-content h2 {
@@ -160,6 +166,8 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
+  display: block;
+  overflow-x: auto;
 }
 
 .blog-content th,
@@ -178,7 +186,15 @@ body {
   font-weight: 600;
 }
 
-/* Smooth transitions */
-* {
+/* Smooth theme transitions on key elements */
+html,
+body,
+header,
+footer,
+a,
+button,
+input,
+select,
+textarea {
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.15s ease;
 }

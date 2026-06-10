@@ -19,7 +19,7 @@ export default async function Home() {
   const normal = getNormalRepos(repos).slice(0, 6);
 
   return (
-    <div className="mx-auto max-w-3xl px-6 pb-16">
+    <div className="mx-auto max-w-3xl px-4 sm:px-6 pb-16">
       {/* Hero */}
       <section className="flex flex-col items-center pt-16 pb-12 text-center">
         <div className="relative">
@@ -45,7 +45,7 @@ export default async function Home() {
           {displayUser.bio}
         </p>
 
-        <div className="mt-5 flex items-center gap-5 text-sm text-text-tertiary">
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-sm text-text-tertiary">
           <span className="flex items-center gap-1.5">
             <MapPin size={14} />
             GuangZhou, China

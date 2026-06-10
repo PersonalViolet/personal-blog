@@ -27,7 +27,7 @@ export default function BlogPage() {
   }
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-12">
+    <div className="mx-auto max-w-3xl px-4 sm:px-6 py-8 sm:py-12">
       <h1 className="text-2xl font-bold text-text-primary">博客</h1>
       <p className="mt-2 text-text-secondary">
         技术思考与学习记录。
