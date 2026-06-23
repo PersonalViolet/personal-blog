@@ -36,6 +36,17 @@ export function Footer() {
           </a>
         </div>
         <p>&copy; {new Date().getFullYear()} VIOLET. All rights reserved.</p>
+
+        {process.env.NEXT_PUBLIC_ICP_BEIAN && (
+          <a
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-text-tertiary hover:text-accent transition-colors"
+          >
+            {process.env.NEXT_PUBLIC_ICP_BEIAN}
+          </a>
+        )}
       </div>
     </footer>
   );

@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run build:github",
+    "build:github": "next build",
+    "build:china": "cross-env NEXT_PUBLIC_BASE_PATH=/ NEXT_PUBLIC_ICP_BEIAN=粤ICP备2026080692号 next build",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
@@ -30,6 +32,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^6.0.2",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
     "jsdom": "^29.1.1",
