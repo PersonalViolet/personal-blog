@@ -37,15 +37,36 @@ export function Footer() {
         </div>
         <p>&copy; {new Date().getFullYear()} VIOLET. All rights reserved.</p>
 
-        {process.env.NEXT_PUBLIC_ICP_BEIAN && (
-          <a
-            href="https://beian.miit.gov.cn/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-text-tertiary hover:text-accent transition-colors"
-          >
-            {process.env.NEXT_PUBLIC_ICP_BEIAN}
-          </a>
+        {(process.env.NEXT_PUBLIC_ICP_BEIAN || process.env.NEXT_PUBLIC_GABEI) && (
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-text-tertiary">
+            {process.env.NEXT_PUBLIC_ICP_BEIAN && (
+              <a
+                href="https://beian.miit.gov.cn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
+                {process.env.NEXT_PUBLIC_ICP_BEIAN}
+              </a>
+            )}
+            {process.env.NEXT_PUBLIC_GABEI && (
+              <a
+                href="https://beian.mps.gov.cn/#/query/webSearch?code=44098202441184"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 hover:text-accent transition-colors"
+              >
+                <img
+                  src={process.env.NEXT_PUBLIC_BASE_PATH + "/beian.png"}
+                  alt=""
+                  width={14}
+                  height={14}
+                  className="shrink-0"
+                />
+                {process.env.NEXT_PUBLIC_GABEI}
+              </a>
+            )}
+          </div>
         )}
       </div>
     </footer>

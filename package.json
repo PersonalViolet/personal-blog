@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "npm run build:github",
     "build:github": "next build",
-    "build:china": "cross-env NEXT_PUBLIC_BASE_PATH=/ NEXT_PUBLIC_ICP_BEIAN=粤ICP备2026080692号 next build",
+    "build:china": "cross-env NEXT_PUBLIC_BASE_PATH=/ NEXT_PUBLIC_ICP_BEIAN=粤ICP备2026080692号 NEXT_PUBLIC_GABEI=粤公网安备44098202441184号 next build",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",

@@ -16,6 +16,7 @@ const nextConfig: NextConfig = {
   // 构建时注入环境变量供客户端读取
   env: {
     NEXT_PUBLIC_ICP_BEIAN: process.env.NEXT_PUBLIC_ICP_BEIAN ?? "",
+    NEXT_PUBLIC_GABEI: process.env.NEXT_PUBLIC_GABEI ?? "",
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
   images: {
